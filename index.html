@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎉 Selamat Ulang Tahun! 🎂</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="background-music" loop>
+        <source src="assets/audio/Lirik lagu Barakallahu Fii Umrik - Qhutbus Sakha - ZONA LIRIK.mp3" type="audio/mpeg">
+        Browser Anda tidak mendukung tag audio.
+    </audio>
+    <button onclick="toggleMusic()" class="music-button">&#127925;</button>
+    
+    <div class="container">
+        <div class="slide active" id="slide1">
+            <h1>😜 Yuk klik tombol hati di tengah sama Tombol musik diatas kanan yaa!</h1>
+            <button class="heart-button" onclick="nextSlide(1)">❤️</button>
+        </div>
+        <div class="slide" id="slide2">
+            <h1>🙄 Eh, coba lagi deh! 🤭</h1>
+            <button class="heart-button" onclick="nextSlide(2)">❤️</button>
+        </div>
+        <div class="slide" id="slide3">
+            <h1>😂 Hahaha, dikit lagi! 🤪</h1>
+            <button class="heart-button" onclick="nextSlide(3)">❤️</button>
+        </div>
+        <div class="slide" id="slide4">
+            <h1>😏 Serius, ini yang terakhir! 😆</h1>
+            <button class="heart-button" onclick="nextSlide(4)">❤️</button>
+        </div>
+        <div class="slide" id="slide5">
+            <h1>🎉🎂 Barakallahu Fii Umrik Sayang..! 🎁🎊</h1>
+            <p>Assalamu’alaikum warahmatullahi wabarakatuh, wahai calon bidadariku di dunia dan insyaAllah di surga nanti.  
+                
+                Di hari yang penuh berkah ini, aku ingin mengucapkan <b>barakallahu fii umrik.</b> Semoga Allah senantiasa melimpahkan rahmat, keberkahan, dan kebahagiaan dalam setiap langkah hidupmu. Semoga usia yang bertambah ini semakin mendekatkanmu kepada Allah, menjadikanmu wanita sholihah yang penuh ketakwaan, serta memudahkan segala urusanmu dunia dan akhirat.  
+                
+                Kakak selalu berdoa, semoga Allah menjaga kesehatanmu, memudahkan rezekimu, dan menjadikanmu istri yang penuh kelembutan, kesabaran, dan keberkahan. Semoga kelak kita dipersatukan dalam ikatan suci yang penuh dengan sakinah, mawaddah, dan rahmah.  
+                
+                Ya Allah, panjangkanlah usianya dalam kebaikan, berkahilah setiap langkahnya, kuatkanlah hatinya dalam menjalani kehidupan, dan jadikanlah ia sebagai wanita yang selalu dekat dengan-Mu.  
+                
+                Aamiin ya Rabbal ‘Alamin.  
+                
+                Wassalamu’alaikum warahmatullahi wabarakatuh.  
+                
+                💖✨</p>
+                <p>dari : salman alfarisi</p>
+            <canvas class="fireworks" id="fireworks"></canvas>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffcccb;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide {
+    display: none;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
+    position: absolute;
+    width: 80%;
+    max-width: 320px;
+    transition: all 0.5s ease-in-out;
+}
+
+.active {
+    display: block;
+}
+
+h1 {
+    color: #e63946;
+    animation: bounce 1.5s infinite;
+    font-size: 1.5rem;
+}
+
+p {
+    color: #333;
+    font-size: 1rem;
+}
+
+.heart-button {
+    margin-top: 20px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    animation: pulse 1.5s infinite;
+}
+
+.music-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.fireworks {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
