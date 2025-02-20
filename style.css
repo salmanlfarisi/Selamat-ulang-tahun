@@ -1,3 +1,10 @@
+/* reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -11,6 +18,7 @@ body {
     margin: 0;
 }
 
+/* kontainer utama */
 .container {
     position: relative;
     width: 100%;
@@ -19,8 +27,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
+/* slide */
 .slide {
     display: none;
     padding: 20px;
@@ -29,26 +39,29 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     animation: fadeIn 0.5s ease-in-out;
     position: absolute;
-    width: 80%;
-    max-width: 320px;
+    width: 90%;
+    max-width: 350px;
     transition: all 0.5s ease-in-out;
 }
 
+/* slide aktif */
 .active {
     display: block;
 }
 
-h1 {
-    color: #e63946;
-    animation: bounce 1.5s infinite;
-    font-size: 1.5rem;
+/* tombol musik pindah ke dalam container */
+.music-button {
+    position: absolute;
+    top: 10px; /* dekat dengan bagian atas kotak */
+    right: 10px; /* dekat dengan pojok kanan kotak */
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
 }
 
-p {
-    color: #333;
-    font-size: 1rem;
-}
-
+/* tombol hati */
 .heart-button {
     margin-top: 20px;
     font-size: 24px;
@@ -58,16 +71,7 @@ p {
     animation: pulse 1.5s infinite;
 }
 
-.music-button {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 24px;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
+/* efek fireworks */
 .fireworks {
     position: fixed;
     top: 0;
@@ -77,6 +81,7 @@ p {
     pointer-events: none;
 }
 
+/* animasi */
 @keyframes fadeIn {
     from { opacity: 0; transform: scale(0.8); }
     to { opacity: 1; transform: scale(1); }
@@ -91,4 +96,26 @@ p {
     0% { transform: scale(1); }
     50% { transform: scale(1.2); }
     100% { transform: scale(1); }
+}
+
+/* ✨ Responsive untuk layar kecil (hp) */
+@media (max-width: 480px) {
+    .slide {
+        width: 95%;
+        max-width: 300px;
+        padding: 15px;
+    }
+
+    .music-button {
+        font-size: 20px;
+        top: 5px; /* biar tetap dekat atas */
+        right: 5px;
+    }
+}
+
+/* ✨ Responsive untuk tablet */
+@media (max-width: 768px) {
+    .slide {
+        max-width: 400px;
+    }
 }
